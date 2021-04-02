@@ -8,8 +8,16 @@ using namespace std;
 vector<int> permutation;
 bool chosen[n+1];
 
+void printPermutation() {
+    cout << "THE PERMUTATION IS NOW ";
+    for(int i=0; i < permutation.size(); i++)
+        cout << permutation.at(i) << ' ';
+    cout << '\n';
+}
+
 void search() {
     if(permutation.size() == n) {
+        cout << "THE OUTPUTTED PERMUTATION IS ";
         for(int i=0; i < permutation.size(); i++)
             cout << permutation.at(i) << ' ';
         cout << '\n';
@@ -20,12 +28,16 @@ void search() {
             if(chosen[i]) continue;
             chosen[i] = true;
             permutation.push_back(i);
+            printPermutation();
             search();
             chosen[i] = false;
             permutation.pop_back();
+            printPermutation();
         }
     }
 }
+
+
 
 int main()
 {
