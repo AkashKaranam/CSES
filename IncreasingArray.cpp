@@ -6,6 +6,7 @@
 using namespace std;
 
 typedef long long ll;
+
 int main()
 {
     ll n;
@@ -27,6 +28,7 @@ int main()
             vals[i] = vals[i-1];
         }
     }
+    
     cout << moves << endl;
 
 }
