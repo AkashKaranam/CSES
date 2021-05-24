@@ -5,15 +5,6 @@
 
 using namespace std;
 
-bool recurse(int a, int b)
-{
-    if(a == 0 && b == 0)
-        return true;
-    else if(a < 0 || b < 0)
-        return false;
-    else
-        return recurse(a-2,b-1) || recurse(a-1,b-2);
-}
 
 int main()
 {
@@ -25,7 +16,9 @@ int main()
     {
         cin >> a;
         cin >> b;
-        if(recurse(a,b))
+        int diff = 2*a-b;
+        int backdiff = 2*b-a;
+        if(diff % 3 == 0 && backdiff % 3 == 0 && diff >=0 && backdiff >= 0)
             cout << "YES" << endl;
         else
             cout << "NO" << endl;

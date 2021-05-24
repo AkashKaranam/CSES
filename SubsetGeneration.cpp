@@ -10,10 +10,11 @@ int n = 3;
 
 void search(int k) 
 {
+    // cout << "Calling search with input " << k << endl;
     if(k == n+1) {
-        cout << "THE SIZE OF THIS SUBSET IS " << subset.size();
-        cout << "\n";
-        cout << "THE VALUES IN THIS SUBSET ARE \n";
+        // cout << "THE SIZE OF THIS SUBSET IS " << subset.size();
+        // cout << "\n";
+        // cout << "THE VALUES IN THIS SUBSET ARE \n";
 
         for(int i=0;i < subset.size();i++)
         {
