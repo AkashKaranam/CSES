@@ -6,14 +6,16 @@
 #define n 3
 using namespace std;
 vector<int> permutation;
+// not using the zero index of chosen
 bool chosen[n+1];
 
-void printPermutation() {
-    cout << "THE PERMUTATION IS NOW ";
-    for(int i=0; i < permutation.size(); i++)
-        cout << permutation.at(i) << ' ';
-    cout << '\n';
-}
+// for understanding how the permutation is built
+// void printPermutation() {
+//     cout << "THE PERMUTATION IS NOW ";
+//     for(int i=0; i < permutation.size(); i++)
+//         cout << permutation.at(i) << ' ';
+//     cout << '\n';
+// }
 
 void search() {
     if(permutation.size() == n) {
@@ -28,11 +30,11 @@ void search() {
             if(chosen[i]) continue;
             chosen[i] = true;
             permutation.push_back(i);
-            printPermutation();
+            // printPermutation();
             search();
             chosen[i] = false;
             permutation.pop_back();
-            printPermutation();
+            // printPermutation();
         }
     }
 }
