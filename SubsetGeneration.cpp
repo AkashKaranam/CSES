@@ -18,7 +18,6 @@ void search(int k)
 
         for(int i=0;i < subset.size();i++)
         {
-            
             cout << subset.at(i) << ' ';
         }
         cout << "\n";
