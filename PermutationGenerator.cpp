@@ -4,9 +4,12 @@
 #include<string>
 
 using namespace std;
+#define length 3
 vector<int> permutation;
+
 const vector<int> primes({2,3,5});
-bool chosen[4];
+// not using the zeroth index of chosen
+bool chosen[length + 1];
 
 void search() {
     if(permutation.size() == primes.size()) {
