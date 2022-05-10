@@ -29,10 +29,12 @@ void search() {
         for(int i=1; i <= n; i++) {
             if(chosen[i]) continue;
             chosen[i] = true;
+            cout << i << " has been chosen" << "\n";
             permutation.push_back(i);
             // printPermutation();
             search();
             chosen[i] = false;
+            cout << i << " has been unchosen" << "\n";
             permutation.pop_back();
             // printPermutation();
         }
